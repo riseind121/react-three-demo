@@ -1,15 +1,15 @@
-import { useFrame } from "@react-three/fiber";
-import React, { useRef } from "react";
+
+import React from "react";
 import { useBox } from "@react-three/cannon";
 const Box = (props) => {
-    const [ref] = useBox(() => ({ mass: 0.00000001, position: [0, 5, 0], ...props }))
-    useFrame(()=>{
-        
-    })
+  
+    const [ref,api] =useBox(()=>({mass:0.00001,...props}))
+    
+
     return (
-      <mesh ref={ref}>
+      <mesh ref={ref} {...props}>
         <boxGeometry  args={[1,1,1]}/>
-        <meshBasicMaterial color='pink'/>
+        <meshBasicMaterial color='blue'/>
         
       </mesh>
     )
