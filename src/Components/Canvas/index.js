@@ -11,10 +11,10 @@ const CustomCanvas = () => {
   
   return (
     
-      <Canvas style={{ height: "90vh" }}>
+      <Canvas style={{ height: "90vh" }} camera={{ fov: 125, position: [0, 20, 50] }}>
         <Physics>
           <ambientLight />
-          <CustomCamera />
+          
           <OrbitControls />
           <Plane position={[0, 0, 0]} />
           <Box position={[0,1,0]} />

@@ -3,7 +3,7 @@ import React from "react";
 import { useBox } from "@react-three/cannon";
 const Box = (props) => {
   
-    const [ref,api] =useBox(()=>({mass:0.00001,...props}))
+    const [ref] =useBox(()=>({mass:0.00001,...props}))
     
 
     return (
